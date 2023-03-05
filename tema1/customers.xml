@@ -1,0 +1,38 @@
+<Customers>
+	<Customer id="0">
+		<CustomerName>Alex</CustomerName>
+	</Customer>
+	<Customer id="1">
+		<CustomerName>Ana</CustomerName>
+	</Customer>
+	<Customer id="2">
+		<CustomerName>Radu</CustomerName>
+	</Customer>
+	<Customer id="3">
+		<CustomerName>George</CustomerName>
+	</Customer>
+	<Customer id="4">
+		<CustomerName>Ionut</CustomerName>
+	</Customer>
+	<Customer id="5">
+		<CustomerName>Maria</CustomerName>
+	</Customer>
+	<Customer id="6">
+		<CustomerName>Andrei</CustomerName>
+	</Customer>
+	<Customer id="7">
+		<CustomerName>Gigel</CustomerName>
+	</Customer>
+	<Customer id="8">
+		<CustomerName>Catalin</CustomerName>
+	</Customer>
+	<Customer id="9">
+		<CustomerName>Silviu</CustomerName>
+	</Customer>
+	<Customer id="10">
+		<CustomerName>AAAAAABBB</CustomerName>
+	</Customer>
+	<Customer id="11">
+		<CustomerName>asd123</CustomerName>
+	</Customer>
+<Customer id="12"><CustomerName>Other</CustomerName></Customer><Customer id="13"><CustomerName>Mickey</CustomerName></Customer><Customer id="14"><CustomerName>Sonic</CustomerName></Customer></Customers>
