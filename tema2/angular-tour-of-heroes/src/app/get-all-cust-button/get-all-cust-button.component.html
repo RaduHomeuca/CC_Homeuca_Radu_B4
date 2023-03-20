@@ -1,0 +1,34 @@
+<p>get-all-cust-button works!</p>
+<button type="button" (click)="getAllCustomers()"class="btn btn-primary">Get all customers</button>
+<div>
+  <button (click)="getSpecificCustomer(inputField)">Get a specific customer by id</button>
+  <input type="text" [(ngModel)]="inputField">
+</div>
+<div>
+  <button (click)="postSpecificCustomer(inputField2id,inputField2body)">Post a specific customer by id</button>
+  <input type="text" [(ngModel)]="inputField2id">
+  <input type="text" [(ngModel)]="inputField2body">
+</div>
+<div>
+  <button (click)="putSpecificCustomer(inputField3id,inputField3body)">Rename a specific customer by id</button>
+  <input type="text" [(ngModel)]="inputField3id">
+  <input type="text" [(ngModel)]="inputField3body">
+</div>
+<div>
+  <button (click)="deleteSpecificCustomer(inputField4)">Delete a specific customer by id</button>
+  <input type="text" [(ngModel)]="inputField4">
+</div>
+<div>
+  <button (click)="getCustomerCompany(inputField5)">Get info of the company where the customer works by customer's id</button>
+  <input type="text" [(ngModel)]="inputField5">
+</div>
+<div>
+  <button (click)="getCustomerInfo(inputField6)">Get info about a specific customer by id</button>
+  <input type="text" [(ngModel)]="inputField6">
+</div>
+
+
+
+<div><span>msg: </span>{{message.message}}</div>
+
+<!--<h2>{{message.message}} Details</h2>-->

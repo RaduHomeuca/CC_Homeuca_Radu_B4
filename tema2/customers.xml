@@ -1,0 +1,57 @@
+<Customers>
+	<Customer id="0">
+		<CustomerName>Alex</CustomerName>
+		<Cif>18189442</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="1">
+		<CustomerName>Ana</CustomerName>
+		<Cif>17810435</Cif>
+		<Cnp>123456789121</Cnp>
+	</Customer>
+	<Customer id="2">
+		<CustomerName>Radu</CustomerName>
+		<Cif>23838406</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="3">
+		<CustomerName>George</CustomerName>
+		<Cif>11588780</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="4">
+		<CustomerName>Ionut</CustomerName>
+		<Cif>42775258</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="5">
+		<CustomerName>Maria</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="6">
+		<CustomerName>Andrei</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="7">
+		<CustomerName>Gigel</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="8">
+		<CustomerName>Catalin</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="9">
+		<CustomerName>Silviu</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	<Customer id="10">
+		<CustomerName>Popescu</CustomerName>
+		<Cif>11699509</Cif>
+		<Cnp>5010215226770</Cnp>
+	</Customer>
+	</Customers>
