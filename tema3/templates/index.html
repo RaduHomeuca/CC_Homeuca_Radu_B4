@@ -1,0 +1,146 @@
+<html>
+<head>
+  <title>Datastore and Firebase Auth Example</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!--  <h1>Datastore and Firebase Auth Example</h1>-->
+
+<!--  <h2>Last 10 visits</h2>-->
+<!--  {% for time in times %}-->
+<!--    <p>{{ time['timestamp'] }}</p>-->
+<!--  {% endfor %}-->
+<!--  <img src={{image}} alt="My Image">-->
+<div>
+  <link href="./home.css" rel="stylesheet" />
+  <div class="home-container">
+    <div class="home-container1">
+      <img
+        src={{image[0].public_url}}
+        alt="image"
+        class="home-image"
+      />
+      <span id="s1">{{sellers[4]['nume']}}</span>
+      <div style="padding-top: 100px; position: absolute; padding-left: 220px">
+        {% for i in range(0,6) %}
+            {% if translated[i]['owner'] == sellers[4]['nume'] %}
+                <span>{{ translated[i]['descriere'] }}</span>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <div style="padding-top: 180px; position: absolute; padding-left: 220px">
+        <script>
+          const image0 = document.getElementsByClassName('home-image');
+          const src0 = image0[0].src;
+          const name0 = document.getElementById('s1');
+          const nume0=name0.textContent
+        </script>
+        <button onclick="window.location.href='info?img='+src0+'&nume='+nume0">More</button>
+      </div>
+    </div>
+    <div class="home-container2">
+      <img
+        src={{image[1].public_url}}
+        alt="image"
+        class="home-image1"
+      />
+      <span id="s2">{{sellers[3]['nume']}}</span>
+            <div style="padding-top: 100px; position: absolute; padding-left: 220px">
+        {% for i in range(0,6) %}
+            {% if translated[i]['owner'] == sellers[3]['nume'] %}
+                <span>{{ translated[i]['descriere'] }}</span>
+            {% endif %}
+        {% endfor %}
+      </div>
+      <div style="padding-top: 180px; position: absolute; padding-left: 220px">
+
+        <script>
+          const image1 = document.getElementsByClassName('home-image1');
+          const src1 = image1[0].src;
+          const name1 = document.getElementById('s2');
+          const nume1=name1.textContent
+        </script>
+        <button onclick="window.location.href='info?img='+src1+'&nume='+nume1">More</button>
+      </div>
+    </div>
+    <div class="home-container3">
+      <img
+        src={{image[2].public_url}}
+        alt="image"
+        class="home-image2"
+      />
+      <span id="s3">{{sellers[2]['nume']}}</span>
+            <div style="padding-top: 100px; position: absolute; padding-left: 220px">
+        {% for i in range(0,6) %}
+            {% if translated[i]['owner'] == sellers[2]['nume'] %}
+                <span>{{ translated[i]['descriere'] }}</span>
+            {% endif %}
+        {% endfor %}
+      </div>
+      <div style="padding-top: 180px; position: absolute; padding-left: 220px">
+        <script>
+          const image2 = document.getElementsByClassName('home-image2');
+          const src2 = image2[0].src;
+          const name2 = document.getElementById('s3');
+          const nume2=name2.textContent
+        </script>
+        <button onclick="window.location.href='info?img='+src2+'&nume='+nume2">More</button>
+      </div>
+    </div>
+    <div class="home-container4">
+      <img
+        src={{image[3].public_url}}
+        alt="image"
+        class="home-image3"
+      />
+      <span id="s4">{{sellers[1]['nume']}}</span>
+            <div style="padding-top: 100px; position: absolute; padding-left: 220px">
+        {% for i in range(0,6) %}
+            {% if translated[i]['owner'] == sellers[1]['nume'] %}
+                <span>{{ translated[i]['descriere'] }}</span>
+            {% endif %}
+        {% endfor %}
+      </div>
+      <div style="padding-top: 180px; position: absolute; padding-left: 220px">
+        <script>
+          const image3 = document.getElementsByClassName('home-image3');
+          const src3 = image3[0].src;
+          const name3 = document.getElementById('s4');
+          const nume3=name3.textContent
+        </script>
+        <button onclick="window.location.href='info?img='+src3+'&nume='+nume3">More</button>
+      </div>
+    </div>
+    <div class="home-container5">
+      <img
+        src={{image[4].public_url}}
+        alt="image"
+        class="home-image4"
+      />
+      <span id="s5">{{sellers[0]['nume']}}</span>
+            <div style="padding-top: 100px; position: absolute; padding-left: 220px">
+        {% for i in range(0,6) %}
+            {% if translated[i]['owner'] == sellers[0]['nume'] %}
+                <span>{{ translated[i]['descriere'] }}</span>
+            {% endif %}
+        {% endfor %}
+      </div>
+      <div style="padding-top: 180px; position: absolute; padding-left: 220px">
+        <script>
+          const image4 = document.getElementsByClassName('home-image4');
+          const src4 = image4[0].src;
+          const name4 = document.getElementById('s5');
+          const nume4=name4.textContent
+        </script>
+        <button onclick="window.location.href='info?img='+src4+'&nume='+nume4">More</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

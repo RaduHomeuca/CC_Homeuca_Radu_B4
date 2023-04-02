@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<div>
+  <link href="./info.css" rel="stylesheet" />
+  <div class="info-container">
+    <div class="info-container1">
+      <div class="info-container2">
+        <img
+          src={{image}}
+          alt="image"
+          class="info-image"
+        />
+        <span>{{nume}}</span>
+      </div>
+        <span style="font-weight: bold">Descriere:</span>
+        {% for i in range(0,6) %}
+            {% if shoe[i]['owner'] == nume %}
+                <p id="desc">{{ shoe[i]['descriere'] }}</p>
+                <span style="font-weight: bold">Site:</span>
+                <a href={{ shoe[i]['site'] }}>Link to product</a>
+                <span style="font-weight: bold">Seller's shop:</span>
+                {% for i in range(0,5) %}
+                    {% if sellers[i]['nume'] == nume %}
+                        <p id="loc">{{ sellers[i]['adresa'] }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        <p id="desc2"></p>
+
+
+        <div id="map"></div>
+    <script>
+      //var location = "New York City"; // Your location
+      var apiKey = "AIzaSyBmpg5PhiNjQO0L_GoE4WPyfKS2lFfi2TI"; // Your API key
+      const loc= document.getElementById("loc");
+      const locatie2=loc.textContent;
+      var mapElement = document.getElementById("map");
+      var mapUrl = "https://www.google.com/maps/embed/v1/place?key=" + apiKey + "&q=" + encodeURIComponent(locatie2);
+
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute("width", "600");
+      iframe.setAttribute("height", "450");
+      iframe.setAttribute("style", "border:0");
+      iframe.setAttribute("loading", "lazy");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("src", mapUrl);
+      //var locatie3=encodeURIComponent(locatie2);
+      mapElement.appendChild(iframe);
+    </script>
+<!--        <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen-->
+<!--src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBmpg5PhiNjQO0L_GoE4WPyfKS2lFfi2TI&q="></iframe>-->
+<!--        https://www.google.com/maps/embed/v1/undefined?origin=...&q=...&destination=...&center=...&zoom=...&key=...-->
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
