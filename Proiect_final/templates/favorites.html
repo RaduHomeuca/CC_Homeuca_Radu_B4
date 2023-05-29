@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+</head>
+<body>
+<script>
+  function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+}
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    //alert("Welcome again " + user);
+    return user
+  }
+  return ""
+}
+  let username=checkCookie()
+if(username!="") {
+  fetch('/get', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    //fave: src0,
+    nume: username,
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // Handle the response data
+      const fetchedData = data.map(obj => obj.fave);
+    //const formattedData = fetchedData.join('\n');
+      const bigDiv = document.getElementById("big-div");
+    for (const item of fetchedData) {
+        //document.getElementById("this").innerText=item
+      const imgElement = document.createElement("img");
+      imgElement.src = item;
+      imgElement.alt = "image";
+      imgElement.classList.add("home-image");
+      imgElement.style.width="200px";
+      imgElement.style.height="200px";
+      const breaker = document.createElement("br");
+      const del = document.createElement("span");
+      del.style.color='red';
+      del.style.marginLeft='30px';
+      del.style.marginBottom='60px';
+      del.style.border="solid";
+      del.onclick=function(){
+          fetch('/del', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    fave: item,
+  }),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+location.reload();
+      };
+      del.innerText='X';
+      // Append the <img> element to the "big-div" element
+      const more = document.createElement("button");
+      const url = "window.location.href='info?img="+item+"&nume=Seller1";
+      more.onclick=function(){window.location.href="info?img="+item+"&nume=Seller1";};
+      more.innerText="More";
+      bigDiv.appendChild(imgElement);
+      bigDiv.appendChild(more);
+      bigDiv.appendChild(del);
+      bigDiv.appendChild(breaker);
+
+
+    }
+    //document.getElementById('here').innerText=fetchedData[0];
+    //document.getElementById('here').innerText=JSON.stringify(data);
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+}
+
+</script>
+<div style="height: 100px; background-color: #2196F3;">        <img
+        alt="logo"
+        src="https://i.ibb.co/6BWwfCM/logo.png"
+        style="height: 70px; width: 80px; margin-left: 50px; margin-top: 10px;"
+      /></div>
+<br>
+<br>
+<div id="big-div" style="margin-left: 100px;">
+<!--    <span id="this">asd</span>-->
+</div>
+</body>
+</html>
